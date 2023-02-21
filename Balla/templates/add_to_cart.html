@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+{% for product in products %}
+    <div class="product">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+    </div>
+{% endfor %}
+
+
+
+
+
+<!--{% for product in products %}-->
+<!--    <div class="product">-->
+<!--        <h2>{{ product.name }}</h2>-->
+<!--        <p>{{ product.description }}</p>-->
+<!--        <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>-->
+<!--    </div>-->
+<!--{% endfor %}-->
+
+
+
+
+  {% endblock %}

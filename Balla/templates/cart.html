@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+{% for item in cart.cartitem_set.all %}
+    <div class="cart-item">
+        <p>{{ item.product.name }} x {{ item.quantity }}</p>
+    </div>
+{% endfor %}
+
+
+
+
+  {% endblock %}
